@@ -24,8 +24,10 @@ public class TrafficGenerator implements Control {
 		// Considera cualquier nodo de manera aleatoria de la red
 		Node initNode = Network.get(CommonState.r.nextInt(Network.size()));
 
+		int sendNode = CommonState.r.nextInt(Network.size());
+
 		// Se crea un nuevo mensaje
-		Message message = new Message("Number random: " + uniformRandom);
+		Message message = new Message("Number random: " + uniformRandom, sendNode);
 
 		// Y se envía, para realizar la simulación
 		// Los parámetros corresponde a:
